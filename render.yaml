@@ -1,8 +1,7 @@
 services:
   - type: web
-    name: alima-style-app
-    env: python
-    plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: streamlit run app.py --server.port=10000 --server.enableCORS=false
+    name: alima-ml
+    env: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
     region: oregon
